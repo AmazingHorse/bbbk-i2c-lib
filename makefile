@@ -2,7 +2,7 @@
 SILENCE = @
 
 #---- Outputs ----#
-COMPONENT_NAME = bbbk-i2c-lib-test
+COMPONENT_NAME = bbbk-i2c-lib
 
 #--- Inputs ----#
 PROJECT_HOME_DIR = .
@@ -15,7 +15,8 @@ endif
 # code files.
 # These files are compiled and put into the
 # ProductionCode library and links with the test runner
-SRC_FILES = src/Example.c
+SRC_FILES = src/Example.c \
+			src/bbbk_i2c.c
 
 # --- SRC_DIRS ---
 # Use SRC_DIRS to specifiy production directories
@@ -34,9 +35,8 @@ TEST_SRC_FILES = \
 # --- TEST_SRC_DIRS ---
 # Like TEST_SRC_FILES, but biulds everyting in the directory
 TEST_SRC_DIRS = \
-	tests/example-fff \
+	tests/i2c-mock \
 	tests/io-cppumock \
-	tests/fff \
 	tests \
 
 # --- MOCKS_SRC_DIRS ---
@@ -54,8 +54,6 @@ INCLUDE_DIRS =\
   $(CPPUTEST_HOME)/include/Platforms/Gcc \
   src \
   include \
-  fff \
-  tests/fff
 
 
 # --- CPPUTEST_OBJS_DIR ---
