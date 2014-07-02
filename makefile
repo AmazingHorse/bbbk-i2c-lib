@@ -15,8 +15,8 @@ endif
 # code files.
 # These files are compiled and put into the
 # ProductionCode library and links with the test runner
-SRC_FILES = src/Example.c \
-			src/bbbk_i2c.c
+SRC_FILES = src/bbbk_i2c.c \
+			src/stream.c
 
 # --- SRC_DIRS ---
 # Use SRC_DIRS to specifiy production directories
